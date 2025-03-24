@@ -1,0 +1,61 @@
+.main-container {
+    position: relative; /* 중요: 자식 absolute 배치 기준 */
+    height: calc(100vh - 70px);
+    background-color: #fdf6e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 120px;
+    font-weight: bold;
+    color: #FB2D03;
+    margin-bottom: 20px;
+  }
+  
+  /* 이미지가 텍스트 뒤로 가도록 absolute + z-index 낮춤 */
+  .highfive-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewX(-20deg);
+    width: 700px;
+    height: 520px;
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  .slogan {
+    position: relative;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1.5;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  /* 텍스트 그림자 (입체감 효과) */
+  .text-behind {
+    position: absolute;
+    font-size: 100px;
+    left: 3px;
+    top: 3px;
+    color: #FFDADA;
+    -webkit-text-stroke: 1px #FB2D03;
+    text-shadow: 
+      2px 2px 2px rgba(0, 0, 0, 0.3),
+      0px 0px 1px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .text-front {
+    color: #FB2D03;
+    position: relative;
+    z-index: 1;
+  }
+  

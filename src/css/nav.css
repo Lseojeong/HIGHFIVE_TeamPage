@@ -1,0 +1,28 @@
+/* 네비게이션 바 전체 */
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 100px;
+    background-color: #FFF4DF;
+    z-index: 999;
+  }
+  
+  /* 로고 */
+  .logo {
+    height: 40px;
+  }
+  
+  /* 햄버거 메뉴 버튼 */
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
