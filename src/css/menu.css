@@ -3,7 +3,7 @@
     position: absolute; /* Nav 컴포넌트 기준 상대 위치 */
     top: 0;
     right: 0;
-    height: 100vh;
+    height: calc(100vh - 40px);
     width: 250px;
     background: #FFFDF8;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
   /* 메뉴 항목 */
   .menu li {
     font-size: 18px;
-    padding: 10px 0;
+    padding: 15px 0;
     cursor: pointer;
   }
   
@@ -47,4 +47,3 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 1000;
   }
-  
