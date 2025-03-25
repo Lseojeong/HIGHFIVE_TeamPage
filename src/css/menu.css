@@ -47,3 +47,14 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 1000;
   }
+
+  .menu li a {
+    color: #000;            /* 텍스트 색상 (검정) */
+    text-decoration: none;  /* 밑줄 제거 */
+  }
+  
+  /* 마우스를 올렸을 때 효과 */
+  .menu li a:hover {
+    color: #FF8C00;         /* 텍스트 색상 (주황) */
+    font-weight: bold;
+  }
