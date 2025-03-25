@@ -1,0 +1,60 @@
+/* 메뉴 전체 박스 */
+.menu {
+    position: absolute; /* Nav 컴포넌트 기준 상대 위치 */
+    top: 0;
+    right: 0;
+    height: calc(100vh - 40px);
+    width: 250px;
+    background: #FFFDF8;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001; /* 다른 요소 위로 오도록 */
+  }
+  
+  /* 메뉴가 열렸을 때 (햄버거 버튼 클릭 시) */
+  .menu.open {
+    transform: translateX(0);
+  }
+  
+  /* 메뉴 리스트 */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* 메뉴 항목 */
+  .menu li {
+    font-size: 18px;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  
+  /* 현재 활성화된 메뉴 항목 */
+  .menu li.active {
+    color: #FF8C00;
+    font-weight: bold;
+  }
+  
+  /* 메뉴가 열렸을 때 화면 어둡게 덮는 오버레이 */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .menu li a {
+    color: #000;            /* 텍스트 색상 (검정) */
+    text-decoration: none;  /* 밑줄 제거 */
+  }
+  
+  /* 마우스를 올렸을 때 효과 */
+  .menu li a:hover {
+    color: #FF8C00;         /* 텍스트 색상 (주황) */
+    font-weight: bold;
+  }

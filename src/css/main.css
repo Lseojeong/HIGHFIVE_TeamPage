@@ -1,0 +1,284 @@
+
+.main-container {
+    position: relative;
+    height: calc(100vh - 62px);
+    background-color: #FFF4DF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding : 0 240px
+  }
+  
+  /* 메인 타이틀(HIGH FIVE) */
+  .title {
+    font-size: 100px;
+    font-weight: bold;
+    color: #FB2D03;
+    -webkit-text-stroke: 1px #000000;
+    margin: 0;
+    animation: dropIn 1s ease-out;
+  }
+  
+  /* 가운데 배치된 이미지 (박수) */
+  .highfive-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 550px;
+    height: 370px;
+    opacity: 0.6;
+    z-index: 0;
+    animation: highfivePop 1.5s ease-out;
+  }
+  
+  /* 슬로건 전체 컨테이너 */
+  .slogan {
+    display: block; 
+    position: relative;
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 auto; 
+    z-index: 1; 
+  }
+  
+  /* 한 줄씩 감싸는 컨테이너 */
+  .line {
+    position: relative;  
+    display: block;      
+    margin: 20px 0;      
+    text-align: center;  
+    white-space: nowrap;  
+    animation: fadeSlideIn 1s ease-out;
+    animation-fill-mode: both;
+  }
+  .line:nth-child(1) {
+    animation-delay: 0.8s;
+  }
+  .line:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  
+  /* 앞뒤 텍스트가 같은 폰트/크기/굵기를 물려받도록 */
+  .text-behind,
+  .text-front {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  /* 뒷 텍스트 (그림자 역할) */
+  .text-behind {
+    position: absolute;
+    transform: translate(5px, 5px);
+    color: #FFDADA;
+    -webkit-text-stroke: 1px #FB2D03;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  
+  /* 앞 텍스트 (실제 보이는 메인 텍스트) */
+  .text-front {
+    position: relative;
+    color: #FB2D03;
+    z-index: 1;
+  }
+  
+  /* 1단 애니메이션 효과 */
+  @keyframes dropIn {
+    0% {
+      transform: translateY(-200px) scale(1.2);
+      opacity: 0;
+    }
+    80% {
+      transform: translateY(20px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes fadeSlideIn {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes highfivePop {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: translate(-50%, -50%) rotate(20deg) scale(1.1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(20deg) scale(1);
+      opacity: 0.4;
+    }
+  }
+  
+  /* member list */
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollLeft 50s linear infinite;
+    font-size: 20px;
+    color: #FF8C00;
+    letter-spacing: 1px;
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* team section */
+  .team-section {
+    background-color: #FFF4DF;
+    padding: 20px 240px 0;
+    text-align: center;
+  }
+  
+  .team-photo-wrapper {
+  margin-bottom: 90px;
+  }
+
+  .team-photo {
+    width: 100%;
+    max-width: 1300px;
+    border-radius: 16px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 0; /* 기본값 */
+  }
+  
+  .member-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+    padding: 0 240px;
+    margin-top : -80px;
+    }
+  
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+  }
+  
+  .emoji-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .emoji {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .role {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 4px;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .mbti {
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .mbti-container{
+    width: 60px;
+    height: 30px;
+    border-radius: 40%;
+    overflow: hidden;
+    background-color: #FFF4DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .emoji-large {
+    width: 240px;
+    height: 240px;
+    margin-top: -60px;
+  }
+
+  .footer {
+    background-color: #FFF4DF;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .footer-logo {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-text {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .white-background {
+    background-color: #FFFFFF;
+    padding-bottom: 60px;
+    margin-top: -95px;
+    position: relative;
+    z-index: 1;
+
+  }
+  
+  /* 특정 팀원들이 사진에 걸쳐 보이도록 조정 */
+.member-card.overlap-photo {
+  margin-top: -60px; /* 위로 이동 */
+  z-index: 3; /* 사진 위로 올라오도록 설정 */
+}

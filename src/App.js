@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import MainPage from "./pages/MainPage";
+import KimJiSung from "./pages/SubPageJiseong";
+import SeoMinJae from "./pages/SubPageMinjae";
+import LeeHanYong from "./pages/SubPageHanyong";
+import HanSeungHyun from "./pages/SubPageSeunghyun";
+import JeongHyeongPyo from "./pages/SubPageHyeongpyo";
+import ParkSangWoo from "./pages/SubPageSangwoo";
+import ChooHoEun from "./pages/SubPageHoeun";
+import LeeSeoJeong from "./pages/SubPageSeoJeong";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav /> {/* 네비게이션 바 */}
+      <Routes>
+        {/* 기본 메인 페이지 */}
+        <Route path="/" element={<MainPage />} />
+
+        {/* 서브 페이지 경로 */}
+        <Route path="/jisung" element={<KimJiSung />} />
+        <Route path="/seominjae" element={<SeoMinJae />} />
+        <Route path="/leehanyong" element={<LeeHanYong />} />
+        <Route path="/hanseunghyun" element={<HanSeungHyun />} />
+        <Route path="/jeonghyeongpyo" element={<JeongHyeongPyo />} />
+        <Route path="/parksangwoo" element={<ParkSangWoo />} />
+        <Route path="/choohoeun" element={<ChooHoEun />} />
+        <Route path="/leeseojeong" element={<LeeSeoJeong />} />
+      </Routes>
+    </Router>
   );
 }
 
