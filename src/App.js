@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import MainPage from "./pages/MainPage";
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Nav /> {/* 네비게이션 바 */}
+      <ScrollToTop />
       <Routes>
         {/* 기본 메인 페이지 */}
         <Route path="/" element={<MainPage />} />
