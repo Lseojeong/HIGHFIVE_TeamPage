@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/nav.css";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,9 @@ export default function Nav() {
   return (
     <nav className="nav-container">
       {/* 로고 */}
-      <img src="/img/logo.png" alt="Logo" className="logo" />
+      <Link to="/"> 
+        <img src="/img/logo.png" alt="Logo" className="logo" />
+      </Link>
 
       {/* 햄버거 버튼 */}
       <button onClick={toggleMenu} className="menu-button">
