@@ -24,7 +24,7 @@ const SubPageHoeun = () => {
               <img src={require('../img/LHY.png')} alt="Profile" className="profile-image2" />
               </div>
             </div>
-            <h3>Front, Infra</h3>
+            <h3>Backend</h3>
             <p className="name2">이한용</p>
             <span className="tag2">#ISTJ</span>
           </div>

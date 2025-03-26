@@ -10,7 +10,7 @@ const SubPageHoeun = () => {
       <div className="section header2">
         <img src={require('../img/pic3.png')} alt="Background" className="header-image2" />
         <h1>도파민 수집사</h1>
-        <p>#커피 맛있어 #게으른 뱅이 #개미</p>
+        <p>#커피 맛있어 #게으름뱅이 #개미</p>
       </div>
 
       {/* Profile */}
