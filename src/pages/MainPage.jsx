@@ -1,11 +1,11 @@
 import React from "react";
 import '../css/main.css';
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
-  // 8명 배열을 "첫 줄 4명 + 둘째 줄 4명" 순으로 재배치
   const teamMembers = [
-    // 첫 줄(사진 위에 겹칠 멤버)
     {
+      path: "/kimjisung",
       imgSrc: "/img/emoji_jisung.png",
       alt: "김지성 이모지",
       role: "PM, Infra",
@@ -13,6 +13,7 @@ const MainPage = () => {
       mbti: "#INFJ",
     },
     {
+      path: "/seominjae",
       imgSrc: "/img/emoji_minjae.png",
       alt: "서민재 이모지",
       role: "AI",
@@ -20,6 +21,7 @@ const MainPage = () => {
       mbti: "#ISTP",
     },
     {
+      path: "/leehanyong",
       imgSrc: "/img/emoji_hanyong.png",
       alt: "이한용 이모지",
       role: "BackEnd",
@@ -27,14 +29,15 @@ const MainPage = () => {
       mbti: "#ISTJ",
     },
     {
+      path: "/hanseunghyun",
       imgSrc: "/img/emoji_seunghyun.png",
       alt: "한승현 이모지",
       role: "BackEnd, Infra",
       name: "한승현",
       mbti: "#ISFP",
     },
-    // 둘째 줄(사진 아래)
     {
+      path: "/jeonghyeongpyo",
       imgSrc: "/img/emoji_hyeongpyo.png",
       alt: "정형표 이모지",
       role: "AI",
@@ -42,6 +45,7 @@ const MainPage = () => {
       mbti: "#INTP",
     },
     {
+      path: "/parksangwoo",
       imgSrc: "/img/emoji_sangwoo.png",
       alt: "박상우 이모지",
       role: "BackEnd",
@@ -49,6 +53,7 @@ const MainPage = () => {
       mbti: "#INFJ",
     },
     {
+      path: "/choohoeun",
       imgSrc: "/img/emoji_hoeun.png",
       alt: "추호은 이모지",
       role: "FrontEnd, Infra",
@@ -56,6 +61,7 @@ const MainPage = () => {
       mbti: "#INTJ",
     },
     {
+      path: "/leeseojeong",
       imgSrc: "/img/emoji_seojeong.png",
       alt: "이서정 이모지",
       role: "FrontEnd",
@@ -63,7 +69,7 @@ const MainPage = () => {
       mbti: "#ISFP",
     },
   ];
-
+  
   return (
     <>
       {/* 1단: 메인 화면 */}
@@ -122,7 +128,9 @@ const MainPage = () => {
                 />
               </div>
               <div className="role">{member.role}</div>
-              <div className="name">{member.name}</div>
+              <div className="name">
+                <Link to={member.path}>{member.name}</Link>
+              </div>
               <div className="mbti-container">
                 <div className="mbti">{member.mbti}</div>
               </div>
