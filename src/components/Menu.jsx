@@ -17,7 +17,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/kim-ji-sung"
+              to="/kimjisung"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -26,7 +26,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/seo-min-jae"
+              to="/seominjae"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -35,7 +35,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/lee-han-yong"
+              to="/leehanyong"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -44,7 +44,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/han-seung-hyun"
+              to="/hanseunghyun"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -53,7 +53,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/jeong-hyeong-pyo"
+              to="/jeonghyeongpyo"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -62,7 +62,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/park-sang-woo"
+              to="/parksangwoo"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -71,7 +71,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/choo-ho-eun"
+              to="/choohoeun"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -80,7 +80,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
           <li>
             <NavLink
-              to="/lee-seo-jeong"
+              to="/leeseojeong"
               onClick={onClose}
               className={({ isActive }) => (isActive ? "active" : "")}
             >

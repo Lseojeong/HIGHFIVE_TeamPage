@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import MainPage from "./pages/MainPage";
-import KimJiSung from "./pages/SubPageJiseong";
+import KimJiSung from "./pages/SubPageJisung";
 import SeoMinJae from "./pages/SubPageMinjae";
 import LeeHanYong from "./pages/SubPageHanyong";
 import HanSeungHyun from "./pages/SubPageSeunghyun";
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
 
         {/* 서브 페이지 경로 */}
-        <Route path="/jisung" element={<KimJiSung />} />
+        <Route path="/kimjisung" element={<KimJiSung />} />
         <Route path="/seominjae" element={<SeoMinJae />} />
         <Route path="/leehanyong" element={<LeeHanYong />} />
         <Route path="/hanseunghyun" element={<HanSeungHyun />} />
